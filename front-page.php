@@ -53,29 +53,10 @@
         <img class="md:w-[100%]  h-auto rounded-md"
             src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?cs=srgb&dl=pexels-andrewpersonaltraining-697509.jpg&fm=jpg"
             alt="">
-        <span class=" w-full flex flex-row justify-start gap-4 px-6">
-            <i class=" text-[27px] fa-solid fa-house"></i>
-            <h3 class="text-[18px]">Morocco, Casablanca, Errahma</h3>
-        </span>
-        <a class="cursor-pointer visited:text-white hover:text-[#00a6fb] w-full flex flex-row justify-start gap-4 px-6">
-            <i class="text-[27px] text-[24px] fa-brands fa-square-whatsapp"></i>
-            <h3 class="text-[18px]">+212 602 954 570</h3>
-        </a>
-        <a
-            class="cursor-pointer visited:text-white hover:text-[#00a6fb]  w-full flex flex-row justify-start gap-4 px-6">
-            <i class=" text-[27px] fa-brands fa-square-facebook"></i>
-            <h3 class="text-[18px]">@user</h3>
-        </a>
-        <a
-            class="cursor-pointer visited:text-white hover:text-[#00a6fb]  w-full flex flex-row justify-start gap-4 px-6">
-            <i class=" text-[27px] fa-brands fa-square-instagram"></i>
-            <h3 class="text-[18px]">@user</h3>
-        </a>
-        <a
-            class="cursor-pointer visited:text-white hover:text-[#00a6fb] mb-4 w-full flex flex-row justify-start gap-4 px-6">
-            <i class=" text-[27px] fa-brands fa-square-youtube"></i>
-            <h3 class="text-[18px]">@user</h3>
-        </a>
+        <p class="p-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id earum dicta ea magnam molestias fugiat, tempore
+            aliquid. Nisi tempore obcaecati magnam earum eveniet ipsum perferendis? Cum ut nisi pariatur excepturi.
+        </p>
 
     </span>
     <span class="w-full md:w-[60%] h-full flex justify-start flex-col">
@@ -108,7 +89,46 @@
     </span>
 
 </div>
-<div id="contact" class="p-10 w-full">
-    <span id="cli" class="w-full"></span>
+<div id="contact" class=" xfont flex justify-center items-center gap-5 bg-[#f7f7f7] p-10 w-full mt-4">
+    <span class=" w-[50%] ">
+        <h3 class="text-[50px] text-[#00a6fb]">Get In Touch </h3>
+        <p class="ml-4 max-w-[350px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, quod
+            repellendus? Id
+            molestias et,
+            facilis corrupti libero quis non? Rerum cumque deserunt ipsam aut nobis sit ad in vero eaque.</p>
+        <span class="flex justify-center items-center w-full gap-4 mt-4">
+            <a
+                class="hover:scale-[0.9] duration-200 transtion-all cursor-pointer visited:text-white hover:text-[#00a6fb]">
+                <i class="text-[40px] fa-solid fa-location-dot"></i>
+            </a>
+            <a
+                class="hover:scale-[0.9] duration-200 transtion-all cursor-pointer visited:text-white hover:text-[#00a6fb]">
+                <i class="text-[50px] text-[24px] fa-brands fa-square-whatsapp"></i>
+            </a>
+            <a
+                class="hover:scale-[0.9] duration-200 transtion-all cursor-pointer visited:text-white hover:text-[#00a6fb]  ">
+                <i class=" text-[50px] fa-brands fa-square-facebook"></i>
+            </a>
+            <a
+                class="hover:scale-[0.9] duration-200 transtion-all cursor-pointer visited:text-white hover:text-[#00a6fb] ">
+                <i class=" text-[50px] fa-brands fa-square-instagram"></i>
+            </a>
+            <a
+                class="hover:scale-[0.9] duration-200 transtion-all cursor-pointer visited:text-white hover:text-[#00a6fb]">
+                <i class=" text-[50px] fa-brands fa-square-youtube"></i>
+            </a>
+        </span>
+    </span>
+    <span class="w-[50%] rounded-md bg-[#242424]">
+        <form class="flex flex flex-col gap-4 p-4 rounded-xl">
+            <h3 class="text-center text-[24px] text-white">Send a Message</h3>
+            <input class="active:outline-[#00a6fb]  bg-white h-14 rounded-md px-4 " placeholder="Name" type="text">
+            <input class="active:outline-[#00a6fb]  bg-white h-14 rounded-md px-4 " placeholder="Email" type="text">
+            <textarea class="bg-white h-24 rounded-md p-4 " placeholder="Message" type="text"></textarea>
+            <button
+                class="bg-[#00a6fb] text-white rounded-md outline-none border-none p-2 hover:scale-[0.98] duration-200 transtion-all"
+                type="submit">Send</button>
+        </form>
+    </span>
 </div>
 <?php  get_footer() ?>
