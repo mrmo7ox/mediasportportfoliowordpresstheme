@@ -1,0 +1,23 @@
+:root {
+    --hover_color: #00a6fb;
+    --hover_color: #00000038;
+}
+
+.xfont {
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.font800 {
+    font-family: "Poppins";
+    font-weight: 800;
+}
+
+.font600 {
+    font-family: "Poppins";
+    font-weight: 600;
+}
+
+html {
+    scroll-behavior: smooth;
+}
