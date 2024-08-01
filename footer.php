@@ -69,5 +69,25 @@
     </div>
   </nav>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      slidesPerView: 3,
+      autoplay: {
+        delay: 2500,
+        modifier: 1,
+
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 </html>

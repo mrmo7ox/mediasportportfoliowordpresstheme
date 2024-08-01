@@ -21,3 +21,30 @@
 html {
     scroll-behavior: smooth;
 }
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.swiper-slide video:hover {
+    scale: 0.99;
+    transition: 200ms all;
+}

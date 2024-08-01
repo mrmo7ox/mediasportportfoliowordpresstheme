@@ -89,9 +89,53 @@
     </span>
 
 </div>
+<div class="w-full flex">
+
+    <div class="swiper mySwiper w-[90%]">
+        <div class="swiper-wrapper">
+            <?php
+          $category_slug = 'videos';
+      
+          $args = array(
+              'post_type'      => 'post',      
+              'posts_per_page' => -1,         
+              'category_name'  => $category_slug 
+          );
+      
+          $query = new WP_Query($args);
+      
+          if ($query->have_posts()) :
+              
+              while ($query->have_posts()) : $query->the_post();
+                  $content = get_the_content();
+                  
+                  preg_match_all('/<figure class="wp-block-video">(.*?)<\/figure>/is', $content, $matches);
+                  
+                  if (!empty($matches[1])) {
+                      foreach ($matches[1] as $figure_content) {
+                          echo '<div class="swiper-slide">';
+                          echo $figure_content; 
+                          echo '</div>';
+                      }
+                  }
+                  
+              endwhile;
+              
+              wp_reset_postdata();
+              
+          endif;
+          ?>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+</div>
 <div id="contact" class=" xfont flex justify-center items-center gap-5 bg-[#f7f7f7] p-10 w-full mt-4">
     <span class=" w-[50%] ">
-        <h3 class="text-[50px] text-[#00a6fb]">Get In Touch </h3>
+        <h3 class="text-[50px] text-[#00a6fb]">Get In Touch</h3>
         <p class="ml-4 max-w-[350px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, quod
             repellendus? Id
             molestias et,
