@@ -89,9 +89,10 @@
     </span>
 
 </div>
-<div class="w-full flex">
-
-    <div class="swiper mySwiper w-[90%]">
+<div class="xfont w-full flex flex-col my-4 justify-center items-center">
+    <h3 class="flex justify-center items-center text-[50px]" >Work Showcase</h3>
+    <h5 class="flex w-[90%] flex  items-center gap-1" ><i class="fa-solid fa-video"></i> Videos</h5>
+    <div class="swiper mySwiper w-[90%] ">
         <div class="swiper-wrapper">
             <?php
           $category_slug = 'videos';
@@ -130,11 +131,53 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
     </div>
+    <h5 class="flex w-[90%] flex  items-center gap-1 mt-2" ><i class="fa-solid fa-image"></i> Images</h5>
+            <?php
+        $category_slug = 'images';
 
+        $args = array(
+            'post_type'      => 'post',      
+            'posts_per_page' => -1,         
+            'category_name'  => $category_slug 
+        );
+
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) :
+      
+            
+            $pattern_index = 0;
+
+            echo '<div class="w-[90%] grid grid-cols-6 gap-4 p-4">';
+            
+            while ($query->have_posts()) : $query->the_post();
+                $content = get_the_content();
+                
+                preg_match_all('/<img\s+[^>]*>/i', $content, $matches);
+                
+                if (!empty($matches[0])) {
+                    foreach ($matches[0] as $img_tag) {
+                        
+                        echo '<div id="grid_img" class="h-[300px] md:h-[250px] col-span-6 xl:col-span-2 md:col-span-3 object-cover grid_img rounded-md">';
+                        echo $img_tag; 
+                        echo '</div>';
+                        
+                    }
+                }
+            endwhile;
+            
+            echo '</div>';
+            
+            wp_reset_postdata();
+        endif;
+        ?>
+
+        
+            
 
 </div>
-<div id="contact" class=" xfont flex justify-center items-center gap-5 bg-[#f7f7f7] p-10 w-full mt-4">
-    <span class=" w-[50%] ">
+<div id="contact" class=" xfont flex-col md:flex-row flex justify-center items-center gap-5 bg-[#f7f7f7] p-10 w-full mt-4">
+    <span class="w-[80%] md:w-[50%] flex justify-center items-center flex-col">
         <h3 class="text-[50px] text-[#00a6fb]">Get In Touch</h3>
         <p class="ml-4 max-w-[350px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, quod
             repellendus? Id
@@ -163,8 +206,8 @@
             </a>
         </span>
     </span>
-    <span class="w-[50%] rounded-md bg-[#242424]">
-        <form class="flex flex flex-col gap-4 p-4 rounded-xl">
+    <span class="w-[80%] md:w-[50%]">
+        <form class="  rounded-md  bg-[#242424] w-full md:w-[75%] flex flex flex-col gap-4 p-4 rounded-xl">
             <h3 class="text-center text-[24px] text-white">Send a Message</h3>
             <input class="active:outline-[#00a6fb]  bg-white h-14 rounded-md px-4 " placeholder="Name" type="text">
             <input class="active:outline-[#00a6fb]  bg-white h-14 rounded-md px-4 " placeholder="Email" type="text">
