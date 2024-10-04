@@ -51,11 +51,14 @@ html {
     transition: 200ms all;
 }
 
-#grid_img img
-{
+#grid_img img {
     object-fit: cover;
     height: 100%;
     width: 100%;
     border-radius: 20px;
     box-shadow: 0 0 20px #00000038;
+}
+
+body {
+    background-color: white;
 }
