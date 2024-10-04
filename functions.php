@@ -138,18 +138,18 @@ add_action( 'widgets_init', 'mediasportportfolio_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mediasportportfolio_scripts() {
-	wp_enqueue_style( 'mediasportportfolio-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_style( 'mediasportportfolio-main', get_template_directory_uri() . "/styles/main.css" );
-	wp_style_add_data( 'mediasportportfolio-style', 'rtl', 'replace' );
+    wp_enqueue_style( 'mediasportportfolio-style', get_stylesheet_uri(), array(), _S_VERSION );
+    wp_enqueue_style( 'mediasportportfolio-main', get_stylesheet_directory_uri() . '/styles/main.css', array(), _S_VERSION );
+    wp_style_add_data( 'mediasportportfolio-style', 'rtl', 'replace' );
 
+    wp_enqueue_script( 'mediasportportfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), _S_VERSION, true );
 
-	wp_enqueue_script( 'mediasportportfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'mediasportportfolio_scripts' );
+
 
 /**
  * Implement the Custom Header feature.
