@@ -1,7 +1,7 @@
 <?php  get_header() ?>
 
 
-<div id="hero"
+<div class="bg-black" id="hero"
     class="xfont font600 w-full md:h-[400px] gap-5 md:flex-row flex-col-reverse	 flex p-5 md:p-10 justify-center items-center">
 
     <div class="w-full md:w-[50%] h-full gap-4 flex  flex-col justify-center items-center">
