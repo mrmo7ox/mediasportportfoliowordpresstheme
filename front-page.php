@@ -1,8 +1,8 @@
 <?php  get_header() ?>
 
 
-<div class="bg-black" id="hero"
-    class="xfont font600 w-full md:h-[400px] gap-5 md:flex-row flex-col-reverse	 flex p-5 md:p-10 justify-center items-center">
+<div id="hero"
+    class="bg-black xfont font600 w-full md:h-[400px] gap-5 md:flex-row flex-col-reverse	 flex p-5 md:p-10 justify-center items-center">
 
     <div class="w-full md:w-[50%] h-full gap-4 flex  flex-col justify-center items-center">
         <h3 class=" md:text-[45px] text-[35px]">I'm John Doe, and I craft visual stories with a creative touch.</h3>
